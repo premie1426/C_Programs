@@ -4,7 +4,9 @@ void bubble(int a[], int n) {
     for (int i = 0; i < n-1; i++){
         for (int j = 0; j < n-i-1; j++){
             if (a[j] > a[j+1]) {
-                int t = a[j]; a[j] = a[j+1]; a[j+1] = t;
+                int t = a[j]; 
+                a[j] = a[j+1]; 
+                a[j+1] = t;
             }
         }
     }
@@ -13,9 +15,14 @@ void bubble(int a[], int n) {
 void selection(int a[], int n) {
     for (int i = 0; i < n-1; i++) {
         int min = i;
-        for (int j = i+1; j < n; j++)
-            if (a[j] < a[min]) min = j;
-        int t = a[i]; a[i] = a[min]; a[min] = t;
+        for (int j = i+1; j < n; j++){
+            if (a[j] < a[min]) {
+                min = j;
+            }
+        }
+        int t = a[i]; 
+        a[i] = a[min];
+        a[min] = t;
     }
 }
 
@@ -43,7 +50,9 @@ int main() {
     }
 
     printf("Sorted array: ");
-    for (int i = 0; i < n; i++) printf("%d ", a[i]);
+    for (int i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
     printf("\n");
 
     printf("Enter element to search: ");
@@ -53,7 +62,7 @@ int main() {
     while (low <= high) {
         int mid = (low + high) / 2;
         if (a[mid] == key) {
-            printf("Element found at index %d.\n", mid);
+            printf("Element found at index %d\n", mid);
             found = 1;
             break;
         }
@@ -64,5 +73,7 @@ int main() {
             high = mid - 1;
         }
     }
-    if (!found) printf("Element not found.\n");
+    if (!found) {
+        printf("Element not found");
+    }
 }
