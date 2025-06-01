@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int m[4][4], i, j;
+    int m[3][3], i, j;
     int sum = 0,d1 = 0,d2 = 0;
 
     printf("Enter the elements of the 4x4 matrix:\n");
@@ -27,7 +27,7 @@ int main() {
         printf("\n");
     }
 
-    printf("\nSum of all elements: %d\n", sum);
-    printf("Sum of main diagonal: %d\n", d1);
-    printf("Sum of secondary diagonal: %d\n", d2);
+    printf("Sum of all elements: %d \n", sum);
+    printf("Sum of main diagonal: %d \n", d1);
+    printf("Sum of secondary diagonal: %d", d2);
 }
