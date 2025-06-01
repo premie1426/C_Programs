@@ -15,7 +15,7 @@ int main() {
     printf("\nThe 4x4 matrix is:\n");
     for (i = 0; i < 4; i++) {
         for (j = 0; j < 4; j++) {
-            printf("%4d", m[i][j]);
+            printf("%d", m[i][j]);
          sum += m[i][j];
             if (i == j) {
                 d1 += m[i][j];
