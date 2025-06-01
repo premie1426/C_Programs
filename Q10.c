@@ -25,7 +25,9 @@ int main() {
     printf("Enter number of elements: ");
     scanf("%d", &n);
     printf("Enter elements: ");
-    for (int i = 0; i < n; i++) scanf("%d", &a[i]);
+    for (int i = 0; i < n; i++){
+        scanf("%d", &a[i]);
+    }
 
     printf("Enter 1 for Bubble Sort or 2 for Selection Sort: ");
     scanf("%d", &choice);
@@ -55,8 +57,12 @@ int main() {
             found = 1;
             break;
         }
-        if (a[mid] < key) low = mid + 1;
-        else high = mid - 1;
+        if (a[mid] < key) {
+            low = mid + 1;
+        }
+        else {
+            high = mid - 1;
+        }
     }
     if (!found) printf("Element not found.\n");
 }
