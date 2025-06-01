@@ -73,7 +73,7 @@ int main() {
             high = mid - 1;
         }
     }
-    if (!found) {
+    if (found=0) {
         printf("Element not found");
     }
 }
