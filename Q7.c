@@ -2,26 +2,27 @@
 
 int main() {
     int arr[100], n;
-    int *ptr = arr;
-    int largest, secondLargest;
+    int *p = &arr;
+    int largest, second;
 
-    printf("Enter number of elements: ");
+    printf("Enter number of elements: \n");
     scanf("%d", &n);
 
-    printf("Enter %d elements:\n", n);
+    printf("Enter elements: \n");
     for (int i = 0; i < n; i++) {
-        scanf("%d", ptr + i);
+        scanf("%d", p + i);
     }
 
-    largest = secondLargest = *ptr;  
+    largest = second = *p;  
     for (int i = 1; i < n; i++) {
-        if (*(ptr + i) > largest) {
-            secondLargest = largest;
-            largest = *(ptr + i);
-        } else if (*(ptr + i) > secondLargest && *(ptr + i) != largest) {
-            secondLargest = *(ptr + i);
+        if (*(p + i) > largest) {
+            second = largest;
+            largest = *(p + i);
+        } 
+        else if (*(p + i) > second && *(p + i) != largest) {
+            second = *(p + i);
         }
     }
 
-    printf("Second largest element is: %d\n", secondLargest);
+    printf("Second largest element is: %d ", second);
 }
